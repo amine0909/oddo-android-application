@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/taskCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    android:background="?android:selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/nameTask"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@id/coverImage"
+            android:layout_alignBottom="@id/coverImage"
+            android:padding="@dimen/card_margin"
+            android:text="hello"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <TextView
+            android:id="@+id/TaskStartDate"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coverImage"
+            android:padding="@dimen/card_margin"
+            android:text="Start date: "
+            android:textSize="6pt"
+            android:textColor="?android:textColorSecondary" />
+
+        <TextView
+            android:id="@+id/TaskDeadline"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/card_margin"
+            android:text="Deadline date: "
+            android:textSize="6pt"
+            android:layout_below="@id/TaskStartDate"
+            android:textColor="?android:textColorSecondary" />
+
+        <TextView
+            android:id="@+id/TaskDescription"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TaskDeadline"
+            android:padding="@dimen/card_margin"
+            android:text="Description :" />
+        <TextView
+            android:id="@+id/TaskStatus"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TaskDescription"
+            android:padding="@dimen/card_margin"
+            android:textSize="5pt"
+            android:textColor="@color/colorAccent"
+            android:text="Stage : " />
+
+        <TextView
+            android:id="@+id/task_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TaskStatus"
+            android:text=""
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="changer stage"
+            android:layout_below="@id/task_id"
+            android:onClick="showStageDialog"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
