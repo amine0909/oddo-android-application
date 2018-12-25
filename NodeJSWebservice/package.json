@@ -1,0 +1,19 @@
+{
+  "name": "odoonode",
+  "version": "1.0.0",
+  "description": "Odoo Client",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [
+    "odoojs"
+  ],
+  "author": "DSI32",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "odoo-xmlrpc": "^1.0.7"
+  }
+}
